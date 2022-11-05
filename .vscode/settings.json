@@ -172,6 +172,7 @@
     "latex-workshop.view.pdf.viewer": "browser",
     "latex-workshop.latex.autoClean.run": "onFailed",
     "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.recipe.default": "lastUsed",
     // "julia.enableTelemetry": true,
     // "julia.enableCrashReporter": true,
     // "workbench.editorAssociations": {
