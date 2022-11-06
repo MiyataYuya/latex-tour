@@ -1,29 +1,62 @@
 \documentclass{ltjsarticle}
 \author{Unko Bempi}
-\date{\today}
+\date{\和暦\today}
 \title{Unko ---unko---}
 
 \newcount\it
 \def\myfor#1{
     \it = 0 \loop\ifnum\it < #1
-
-    ようこそ、うんこ。
+    ようこそ、うんこ。\\
     \advance\it by1\repeat
 }
 
+
 \begin{document}
 \maketitle
+\tableofcontents
+%
+\begin{abstract}
+    スカトロジー（英語: Scatology）とは、糞・尿に対する研究・考察を言い、日本語では糞便学（ふんべんがく）とも言う。また、糞尿への興味や、それを愛玩する性的興奮、性癖・性的嗜好、糞尿に関するユーモア、糞尿や糞尿愛好等を主題とした文芸作品等も指す。糞尿趣味を指す場合はスカトロと略されることもある。これらに関係する人間を指してスカトロジストと呼ぶ\cite{wiki}。
     こんにちは、うんこ。
-
+\end{abstract}
+%
+うんこは<うんこ>を表す。うんこ自体が<うんこ>であるわけではなく、うんこはあくまで<うんこ>を指し示す表現でしかない。
     \myfor{3}
-    % ようこそ、うんこ。
-    % ようこそ、うんこ。
-    % ようこそ、うんこ。
-    % ようこそ、うんこ。
-    % ようこそ、うんこ。
-    % ようこそ、うんこ。
-    % ようこそ、うんこ。
-    % ようこそ、うんこ。
-    % ようこそ、うんこ。
+%
+\section{lualatex}
+\newcommand{\texcmd}{some txtxtxtxtxtxt}
+%
+lualatexは以下のようにluaを扱えることが特徴の一つみたいだが、私には旨みがわからない。printのフォーマット方法が不明なので、九九の表も見るに耐えない出来である。
+%
+\begin{center}
+    $ $
+    \directlua{
+        tex.print('\string\\\\')
+        for i = 1, 9 do
+            for j = 1, 9 do
+                tex.print(i*j .. ' ')
+            end
+            tex.print('\string\\\\')
+        end
+    }
+\end{center}
+\section{うんこについて}
+ここでは、うんこについての概要を書く。
 
+\section{「このクソッタレが!」}
+「このクソッタレが！」名古屋の高級焼肉店個室で“人糞”放置事件が発生 県議らの会食後に一体何が？《店のオーナーが“憤怒の告発”》
+
+
+\section{岡﨑は書けるのか?}
+lualatexを使えば、「﨑」の字をそのまま表示することができる。彁\cite{yurei}もできる。
+
+
+
+
+
+
+\begin{thebibliography}{99}
+    \bibitem[1]{wiki} スカトロジー, ウィキペディア
+    \bibitem[2]{yurei} http://www.asahi.com/special/kotoba/archive2015/moji/2011082400019.html
+\end{thebibliography}
 \end{document}

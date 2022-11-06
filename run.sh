@@ -1,0 +1,1 @@
+lualatex --jobname=miyata main.tex
