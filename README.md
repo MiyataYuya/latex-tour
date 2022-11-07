@@ -15,18 +15,24 @@ brew install --cask mactex
 [LaTex Workshop](https://marketplace.visualstudio.com/items?itemName=James-Yu.latex-workshop)をインストールする
 
 
-### インターネットからダウンロードしてきたフォントを使う方法。
+### ダウンロードしてきたフォントを使う方法。
 
-[googleフォント](https://fonts.google.com/)などからフォントをダウンロードしているとする。
+事前に[googleフォント](https://fonts.google.com/)などからフォントをダウンロードしているとする。
 
-main.tex と同じディレクトリにダウンロードしたフォント(fontA.otf)を追加し、main.texのプリアンブルに次の文を追加する。
+main.texのプリアンブルに次の文を追加することでフォントを追加できる。
 ```
-\font\fontname=[fontA.otf]
+\newfontfamily\newfont[%
+    Path = fonts/,
+    UprightFont = *-p7PAK,
+    Extension = .ttf
+    ]{Nkf10MagicumComicumCrassum}
 ```
-ここで、[ ]内はmain.tex からみたフォントへの相対パスであり、\fontnameは好きに決めて良い。フォントを複数使いたい場合は、適当なディレクトリ(ex. fonts/)を作ってそこにフォントを配置し、[ ]内は./fonts/fontA.otfのようにすれば良い。
-
-本文中では
+\newfont は好きなように変更して良い。この例の場合、ダウンロードしたフォントのパスは、main.texのあるディレクトリから見て
 ```
-{\fontname 本文}
+./fonts/Nkf10MagicumComicumCrassum-p7PAK.ttf
 ```
-のようにして使用する。
+となっている。このリポジトリにはfontsディレクトリは無いので、適当に追加してほしい。
+使い方はフォントを変更したい文章の先頭に\newfont を加え、全体を{ }で覆うことでスコープできる。
+```
+{\fontname 文章}
+```
