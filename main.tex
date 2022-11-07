@@ -1,4 +1,5 @@
-\documentclass{ltjsarticle}
+\documentclass[nomag]{ltjsarticle}
+\usepackage{luatexja-fontspec}
 \author{Unko Bempi}
 \date{\和暦\today}
 \title{Unko ---unko---}
@@ -9,6 +10,12 @@
     ようこそ、うんこ。\\
     \advance\it by1\repeat
 }
+
+\font\shoujo=[./fonts/Nkf10MagicumComicumCrassum-p7PAK.ttf]
+\font\kolker=[./fonts/KolkerBrush-Regular.ttf]
+
+\jfont\delagoth=[./fonts/DelaGothicOne-Regular.ttf]
+\jfont\rampart=[./fonts/RampartOne-Regular.ttf]
 
 
 \begin{document}
@@ -40,7 +47,11 @@ lualatexは以下のようにluaを扱えることが特徴の一つみたいだ
         end
     }
 \end{center}
+%
+%
 \section{うんこについて}
+ここでは、うんこについての概要を書く。
+ここでは、うんこについての概要を書く。
 ここでは、うんこについての概要を書く。
 
 \section{「このクソッタレが!」}
@@ -50,10 +61,17 @@ lualatexは以下のようにluaを扱えることが特徴の一つみたいだ
 \section{岡﨑は書けるのか?}
 lualatexを使えば、「﨑」の字をそのまま表示することができる。彁\cite{yurei}もできる。
 
+\section{フォントを細かく変える}
+% TODO: フォントサイズを変更できるようにする。
+インターネットからダウンロードしてきたフォントを適当に使うことができる。
 
+まどマギ：{\shoujo We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.}
 
+適当なフォント：{\kolker We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.}
 
+適当なフォント：{\rampart 日本国民は、正当に選挙された国会における代表者を通じて行動し、われらとわれらの子孫のために、諸国民との協和による成果と、わが国全土にわたつて自由のもたらす恵沢を確保し、政府の行為によつて再び戦争の惨禍が起ることのないやうにすることを決意し、ここに主権が国民に存することを宣言し、この憲法を確定する。そもそも国政は、国民の厳粛な信託によるものであつて、その権威は国民に由来し、その権力は国民の代表者がこれを行使し、その福利は国民がこれを享受する。これは人類普遍の原理であり、この憲法は、かかる原理に基くものである。われらは、これに反する一切の憲法、法令及び詔勅を排除する。}
 
+Dela Gothic：{\delagoth 日本国民は、正当に選挙された国会における代表者を通じて行動し、われらとわれらの子孫のために、諸国民との協和による成果と、わが国全土にわたつて自由のもたらす恵沢を確保し、政府の行為によつて再び戦争の惨禍が起ることのないやうにすることを決意し、ここに主権が国民に存することを宣言し、この憲法を確定する。そもそも国政は、国民の厳粛な信託によるものであつて、その権威は国民に由来し、その権力は国民の代表者がこれを行使し、その福利は国民がこれを享受する。これは人類普遍の原理であり、この憲法は、かかる原理に基くものである。われらは、これに反する一切の憲法、法令及び詔勅を排除する。}
 
 \begin{thebibliography}{99}
     \bibitem[1]{wiki} スカトロジー, ウィキペディア

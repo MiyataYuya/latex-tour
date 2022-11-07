@@ -79,7 +79,8 @@
                 "-synctex=1",
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "-jobname=./output/main",
+                // "-jobname=./output/main",
+                "-outdir=./output",
                 "%DOC%"
             ]
         }
@@ -132,7 +133,7 @@
         "-synctex=1",
         "-interaction=nonstopmode",
         "-file-line-error",
-        "--output-directory=%OUTDIR%",
+        // "--output-directory=%OUTDIR%",
         "%DOC%"
     ],
     // latex-workshop.latex.clean.fileTypes: クリーンアップ時に削除されるファイルの拡張子
@@ -158,7 +159,7 @@
         "*.gls",
         "*.ist",
         "*.fls",
-        "*.log",
+        // "*.log",
         "*.fdb_latexmk",
         "*.synctex.gz",
         // for Beamer files
@@ -173,89 +174,7 @@
     // "tab" オプションを指定すると、今開いているエディタを左右に分割し、右側に生成されたPDFを表示するようにしてくれる
     // この PDF ビュアーは LaTeX のビルドによって更新されると同期して内容を更新してくれる。
     "latex-workshop.view.pdf.viewer": "browser",
-    "latex-workshop.latex.autoClean.run": "onFailed",
-    "latex-workshop.latex.autoBuild.run": "never",
+    // "latex-workshop.latex.autoClean.run": "onFailed",
+    "latex-workshop.latex.autoBuild.run": "onFileChange",
     "latex-workshop.latex.recipe.default": "lastUsed",
-    // "julia.enableTelemetry": true,
-    // "julia.enableCrashReporter": true,
-    // "workbench.editorAssociations": {
-    //     "*.ipynb": "jupyter.notebook.ipynb"
-    // },
-    // "python.defaultInterpreterPath": "/Users/miyatayuuya/opt/anaconda3",
-    // "security.workspace.trust.untrustedFiles": "open",
-    // // "python.pythonPath": "/usr/bin/python3",
-    // "python.pythonPath": "/Users/miyatayuuya/opt/anaconda3",
-    // "code-runner.runInTerminal": true,
-    // // "editor.fontSize": 16,
-    // "editor.wordWrap": "on",
-    // // "C_Cpp.updateChannel": "Insiders",
-    // "ltex.dictionary": {
-    //     "en-US": [
-    //         "fibrewise",
-    //         "homotopy",
-    //         "Homotopy",
-    //         "homotopies",
-    //         "homotopic",
-    //         "fibration",
-    //         "fibrations",
-    //         "cofibration",
-    //         "fibre",
-    //         "cofibre",
-    //         "pushout"
-    //     ]
-    // },
-    // // "workbench.colorTheme": "Default Light+",
-    // "security.workspace.trust.enabled": false,
-    // "terminal.integrated.inheritEnv": false,
-    // "editor.bracketPairColorization.enabled": true,
-    // "workbench.iconTheme": "material-icon-theme",
-    // "editor.inlineSuggest.enabled": true,
-    // "[cpp]": {
-    //     "editor.defaultFormatter": "ms-vscode.cpptools"
-    // },
-    // "[rust]": {
-    //     "editor.defaultFormatter": "rust-lang.rust-analyzer"
-    // },
-    // "[typescriptreact]": {
-    //     "editor.defaultFormatter": "esbenp.prettier-vscode"
-    // },
-    // "editor.formatOnSave": true,
-    // "github.copilot.enable": {
-    //     "*": true,
-    //     "yaml": false,
-    //     "plaintext": false,
-    //     "markdown": false,
-    //     "rust": false
-    // },
-    // "explorer.confirmDragAndDrop": false,
-    // // "cmake.configureOnOpen": true,
-    // // "cmake.generator": "make",
-    // // "C_Cpp.intelliSenseEngine": "Disabled",
-    // "[jsonc]": {
-    //     "editor.defaultFormatter": "vscode.json-language-features"
-    // },
-    // "sonarlint.rules": {
-    //     "cpp:S1659": {
-    //         "level": "off"
-    //     },
-    //     "cpp:S3230": {
-    //         "level": "off"
-    //     }
-    // },
-    // "cmake.configureOnOpen": true,
-    // "[python]": {
-    //     "editor.defaultFormatter": "ms-python.python"
-    // },
-    // "path-autocomplete.pathMappings": {
-    //     "/": "/"
-    // },
-    // "git.autofetch": true,
-    // "[cmake]": {
-    //     "editor.defaultFormatter": "josetr.cmake-language-support-vscode"
-    // },
-    // "terminal.integrated.env.osx": {
-    //     "FIG_NEW_SESSION": "1"
-    // },
-    // "editor.accessibilitySupport": "off",
-    // "redhat.telemetry.enabled": true,
 }
