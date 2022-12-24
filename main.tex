@@ -1,103 +1,42 @@
 \documentclass{ltjsarticle}
-\usepackage{luatexja-fontspec}
-\author{Unko Bempi}
+\usepackage{packages}
+\author{著者}
 \date{\和暦\today}
-\title{Unko ---unko---}
+\title{タイトル}
 
-\newcount\it
-\def\myfor#1{
-    \it = 0 \loop\ifnum\it < #1
-    ようこそ、うんこ。\\
-    \advance\it by1\repeat
-}
-
-% \font\shoujo=[./fonts/Nkf10MagicumComicumCrassum-p7PAK.ttf]
-% \font\kolker=[./fonts/KolkerBrush-Regular.ttf]
-
-% \jfont\delagoth=[./fonts/DelaGothicOne-Regular.ttf]
-% \jfont\rampart=[./fonts/RampartOne-Regular.ttf]
-
+% 好きなフォントを使うにはこんな風に
 \newfontfamily\shoujo[%
     Path = fonts/,
     UprightFont = *-p7PAK,
     Extension = .ttf
     ]{Nkf10MagicumComicumCrassum}
 
-\newfontfamily\kolker[%
-    Path = fonts/,
-    UprightFont = *-Regular,
-    Extension = .ttf
-    ]{KolkerBrush}
-
-\newjfontfamily\rampart[%
-    Path = fonts/,
-    UprightFont = *-Regular,
-    Extension = .ttf
-    ]{RampartOne}
-
-\newjfontfamily\delagoth[%
-    Path = fonts/,
-    UprightFont = *-Regular,
-    Extension = .ttf
-    ]{DelaGothicOne}
-
 \begin{document}
 \maketitle
 \tableofcontents
 %
 \begin{abstract}
-    スカトロジー（英語: Scatology）とは、糞・尿に対する研究・考察を言い、日本語では糞便学（ふんべんがく）とも言う。また、糞尿への興味や、それを愛玩する性的興奮、性癖・性的嗜好、糞尿に関するユーモア、糞尿や糞尿愛好等を主題とした文芸作品等も指す。糞尿趣味を指す場合はスカトロと略されることもある。これらに関係する人間を指してスカトロジストと呼ぶ\cite{wiki}。
-    こんにちは、うんこ。
+    アブストラクトはこんなふうに。
 \end{abstract}
 %
-うんこは<うんこ>を表す。うんこ自体が<うんこ>であるわけではなく、うんこはあくまで<うんこ>を指し示す表現でしかない。
-    \myfor{3}
 %
-\section{lualatex}
-\newcommand{\texcmd}{some txtxtxtxtxtxt}
-%
-lualatexは以下のようにluaを扱えることが特徴の一つみたいだが、私には旨みがわからない。printのフォーマット方法が不明なので、九九の表も見るに耐えない出来である。
-%
-\begin{center}
-    $ $
-    \directlua{
-        tex.print('\string\\\\')
-        for i = 1, 9 do
-            for j = 1, 9 do
-                tex.print(i*j .. ' ')
-            end
-            tex.print('\string\\\\')
-        end
-    }
-\end{center}
-%
-%
-\section{うんこについて}
-ここでは、うんこについての概要を書く。
-ここでは、うんこについての概要を書く。
-ここでは、うんこについての概要を書く。
-
-\section{「このクソッタレが!」}
-「このクソッタレが！」名古屋の高級焼肉店個室で“人糞”放置事件が発生 県議らの会食後に一体何が？《店のオーナーが“憤怒の告発”》
-
-
-\section{岡﨑は書けるのか?}
-lualatexを使えば、「﨑」の字をそのまま表示することができる。彁\cite{yurei}もできる。
-
 \section{フォントを細かく変える}
-インターネットからダウンロードしてきたフォントを適当に使うことができる。
+フォントの宣言はプリアンブルに
+\begin{verbatim}
+\newfontfamily\shoujo[%
+    Path = fonts/,
+    UprightFont = *-p7PAK,
+    Extension = .ttf
+    ]{Nkf10MagicumComicumCrassum}
+\end{verbatim}
+のように新たなフォントファミリー
+インターネットからダウンロードしてきたフォントファミリー\verb|\shoujo|を定義する。
 
-まどマギ：{\shoujo the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.}
+{\shoujo We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.}
 
-適当なフォント：{\kolker\Huge We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.}
-
-適当なフォント：{\rampart 日本国民は、正当に選挙された国会における代表者を通じて行動し、われらとわれらの子孫のために、諸国民との協和による成果と、わが国全土にわたつて自由のもたらす恵沢を確保し、政府の行為によつて再び戦争の惨禍が起ることのないやうにすることを決意し、ここに主権が国民に存することを宣言し、この憲法を確定する。そもそも国政は、国民の厳粛な信託によるものであつて、その権威は国民に由来し、その権力は国民の代表者がこれを行使し、その福利は国民がこれを享受する。これは人類普遍の原理であり、この憲法は、かかる原理に基くものである。われらは、これに反する一切の憲法、法令及び詔勅を排除する。}
-
-Dela Gothic：{\delagoth 日本国民は、正当に選挙された国会における代表者を通じて行動し、われらとわれらの子孫のために、諸国民との協和による成果と、わが国全土にわたつて自由のもたらす恵沢を確保し、政府の行為によつて再び戦争の惨禍が起ることのないやうにすることを決意し、ここに主権が国民に存することを宣言し、この憲法を確定する。そもそも国政は、国民の厳粛な信託によるものであつて、その権威は国民に由来し、その権力は国民の代表者がこれを行使し、その福利は国民がこれを享受する。これは人類普遍の原理であり、この憲法は、かかる原理に基くものである。われらは、これに反する一切の憲法、法令及び詔勅を排除する。}
-
-
-\begin{thebibliography}{99}
-    \bibitem[1]{wiki} スカトロジー, ウィキペディア
-    \bibitem[2]{yurei} http://www.asahi.com/special/kotoba/archive2015/moji/2011082400019.html
-\end{thebibliography}
+We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.
+%
+\addcontentsline{toc}{section}{参考文献}
+\bibliographystyle{plain}
+\bibliography{ref}
 \end{document}
