@@ -1,1 +1,23 @@
 \usepackage{luatexja-fontspec}
+
+% hyper link
+\usepackage{bookmark}
+\usepackage{xurl}
+\hypersetup{unicode,bookmarksnumbered=true,hidelinks,final}
+
+% combine tex  files
+\usepackage{docmute}
+
+% table
+\usepackage{here}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{multirow}
+\newcolumntype{M}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{Y}{>{\centering\arraybackslash}X}
+
+% tree diagram
+\usepackage{dirtree}
+
+% commutative diagram
+\usepackage{tikz-cd}

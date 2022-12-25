@@ -1,5 +1,6 @@
 \documentclass{ltjsarticle}
 \usepackage{packages}
+
 \author{著者}
 \date{\和暦\today}
 \title{タイトル}
@@ -21,7 +22,7 @@
 %
 %
 \section{フォントを細かく変える}
-フォントの宣言はプリアンブルに
+フォントの宣言はプリアンブルで行う。例えば\verb|./fonts/Nkf10MagicumComicumCrassum-p7PAK.ttf|から新たなフォントファミリー\verb|\shoujo|を定義するには次のようにする。
 \begin{verbatim}
 \newfontfamily\shoujo[%
     Path = fonts/,
@@ -29,12 +30,16 @@
     Extension = .ttf
     ]{Nkf10MagicumComicumCrassum}
 \end{verbatim}
-のように新たなフォントファミリー
-インターネットからダウンロードしてきたフォントファミリー\verb|\shoujo|を定義する。
-
+すると、
 {\shoujo We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.}
 
-We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America.
+(We the People of the United States, in Order to form a more perfect Union, establish Justice, insure domestic Tranquility, provide for the common defence, promote the general Welfare, and secure the Blessings of Liberty to ourselves and our Posterity, do ordain and establish this Constitution for the United States of America\cite{UScontrib}.)
+
+\section{図の入れ方}
+\begin{tikzcd}
+    A \arrow[r,"f"]\arrow[rd] & B \arrow[d,"g"]\\
+    & C
+\end{tikzcd}
 %
 \addcontentsline{toc}{section}{参考文献}
 \bibliographystyle{plain}
