@@ -20,4 +20,13 @@
 \usepackage{dirtree}
 
 % commutative diagram
+\usepackage{tikz}
 \usepackage{tikz-cd}
+\usetikzlibrary{matrix,arrows}
+\def\pgfsysdriver{pgfsys-pdftex.def}   % pdfTeX, LuaTeX, LuajitTeX の場合。最も高機能
+\usepackage[framemethod=tikz]{mdframed}
+\mdfsetup{%
+backgroundcolor=white!85!black,
+linecolor=none
+}
+
