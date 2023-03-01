@@ -1,0 +1,23 @@
+# Fdb version 4
+["pdflatex"] 1674375648 "/Users/miyatayuuya/project/latex-tour/main.tex" "main.pdf" "main" 1674375648 2
+  "/Users/miyatayuuya/project/latex-tour/main.tex" 1674375648 2652 5164704a9b7134a737613a68c26f1171 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/generic/iftex/iftex.sty" 1644112042 7237 bdd120a32c8fdb4b433cf9ca2e7cd98a ""
+  "/usr/local/texlive/2022/texmf-dist/tex/generic/infwarerr/infwarerr.sty" 1575499628 8356 7bbb2c2373aa810be568c29e333da8ed ""
+  "/usr/local/texlive/2022/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty" 1600895880 17859 4409f8f50cd365c68e684407e5350b1b ""
+  "/usr/local/texlive/2022/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty" 1593379760 20089 80423eac55aa175305d35b49e04fe23b ""
+  "/usr/local/texlive/2022/texmf-dist/tex/latex/base/ltluatex.tex" 1667332637 8802 3d538f0f54900abbc3a15f3929340c5f ""
+  "/usr/local/texlive/2022/texmf-dist/tex/luatex/ctablestack/ctablestack.sty" 1443736950 1510 9c109bd1f6a9fc69b2f6096ee416d958 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/luatex/luaotfload/luaotfload.sty" 1664913378 1812 111305261f7ae81803f3a1002d6b29c4 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/luatex/luatexbase/luatexbase.sty" 1443997592 10170 b1a2248f43cab899e3fe36f676176865 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/luatex/luatexja/ltjsarticle.cls" 1664742158 54048 93eefc8b4e019ecace6b76a007000556 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/luatex/luatexja/luatexja-core.sty" 1664742158 29378 05e8cb921ef8a5965278ad70f8807ab9 ""
+  "/usr/local/texlive/2022/texmf-dist/tex/luatex/luatexja/luatexja.sty" 1670965766 2042 cc395dd71b7852713d264f1ae0a7da8b ""
+  "/usr/local/texlive/2022/texmf-dist/web2c/texmf.cnf" 1646502317 40171 cdab547de63d26590bebb3baff566530 ""
+  "/usr/local/texlive/2022/texmf-var/web2c/pdftex/pdflatex.fmt" 1671891524 7874841 6b90303b3fd6254ed1974e4e12b97d30 ""
+  "/usr/local/texlive/2022/texmf.cnf" 1647878952 577 209b46be99c9075fd74d4c0369380e8c ""
+  "main.aux" 1674375648 32 3985256e7290058c681f74d7a3565a19 ""
+  "main.tex" 1674375648 2652 5164704a9b7134a737613a68c26f1171 ""
+  (generated)
+  "main.log"
+  "main.pdf"
+  (rewritten before read)
